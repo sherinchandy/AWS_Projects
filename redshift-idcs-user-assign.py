@@ -9,7 +9,7 @@ idcs_instance_arn = ""
 redshift_idcs_app_arn = ""
 
 #Below variables to pass from calling app.
-idcs_instance_name = 'IDCS-Instance-1'
+idcs_instance_name = 'IDCS-Instance-123'
 aws_account = 1234556567
 aws_region = 'us-west-2'
 attr_path = 'UserName'
