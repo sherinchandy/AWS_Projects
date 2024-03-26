@@ -73,15 +73,6 @@ def get_snapshot_details(csv_file_path):
                  else: 
                   restore_rs_cluster(redshift_client, cluster_name, snapshot_id, port, avaialability_zone, rs_subnet_grp, node_type, no_of_nodes, maintenance_track, encrypted, manage_master_passwd)
   
-  
-#redshift_client = boto3.client('redshift')
-#response = redshift_client.describe_cluster_snapshots(SortingEntities=[{'Attribute':'CREATE_TIME','SortOrder':'DESC'}])
-#snapshots = response['Snapshots']
-
-#snapshot_id='idc-snap1'
-#redshift_client = boto3.client('redshift', region_name='us-west-2')
-#snapshot_details = redshift_client.describe_cluster_snapshots(SnapshotIdentifier=snapshot_id)
-#restore_rs_cluster=redshift_client.restore_from_cluster_snapshot(SnapshotIdentifier=snapshot_id,ClusterIdentifier='cluster1-enc', Encrypted=True, ManageMasterPassword=True)
                   
 #Main Function to read CSV file path as argument and pass it to the next function, CSV file should be of format "region name", "snapshot identifier", "redshift subnet group name". 
 def main():
