@@ -199,7 +199,7 @@ def generate_marketing_html(compelling_text: str, images: tuple):
         generated_text = json.loads(response['body'].read())["output"]["message"]["content"][0]["text"]
 
         with (open("Campaign.HTML", "w")) as f:
-            f.write(generated_text)
+            f.write(generated_text.strip("`"))
         return f.name
 
     except Exception as e:
